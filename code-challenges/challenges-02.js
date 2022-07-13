@@ -42,13 +42,16 @@ const shuffleArray = (arr) => {
 // Explanation: As shown, "codeleet" becomes "leetcode" after shuffling.
 
 const shuffleString = (str, indicesArr) => {
-  let secondHalf= "";
-  let firstHalf= "";
-  if (str.length%2===0){
-  for (let i=0; i<str.length;i++){
-  (i<str.length/2)? secondHalf+=str[i]:firstHalf+=str[i];}
-  return firstHalf+secondHalf;}
-  else return str;
+  let result=[];
+  if (indicesArr!=undefined){
+       if (indicesArr.length == str.length){
+  {     
+      for (let i=0; i<str.length;i++){
+      result[indicesArr[i]] = str[i];
+    }
+      return result.join('')}}
+  } else {
+      return str}
 };
 // -------------------------------------------------------------------------------------------------------
 
