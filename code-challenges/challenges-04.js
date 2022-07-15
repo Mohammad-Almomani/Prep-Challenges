@@ -65,12 +65,12 @@ return resultArray;
 //
 
 const oddFiltration = (arr) => {
-  return arr.filter(oddNums => oddNums%2==1)
+  return arr.filter(oddNums => Math.abs(oddNums)%2==1)
 
   // solution without using filter: 
-//   let oddNums =[];
+  // let oddNums =[];
 // for (let i=0; i<arr.length;i++){
-//     arr[i]%2==1?oddNums.push(arr[i]):false
+//     Math.abs(arr[i])%2==1?oddNums.push(arr[i]):false
 //     }
 // return oddNums
 };
